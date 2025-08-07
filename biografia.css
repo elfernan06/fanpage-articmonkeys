@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Elza";
-  src: url(/Fuentes/fonnts.com-Elza_Bold.otf);
+  src: url(fonnts.com-Elza_Bold.otf);
   font-weight: bold;
   font-style: bold;
 }
@@ -355,3 +355,4 @@ p {
 }
 
 /* nos esta diciendo que cuando la pantalla sea menor a 700px, el main se vuelve una columna y se centra */
+
