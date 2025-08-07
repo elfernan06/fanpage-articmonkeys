@@ -1,0 +1,536 @@
+@font-face {
+  font-family: "Elza";
+  src: url(/Fuentes/fonnts.com-Elza_Bold.otf);
+  font-weight: bold;
+  font-style: bold;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Elza";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*****FORMATO DE LA PAGINA*******/
+
+header {
+  width: 100%;
+  height: auto;
+  background-color: #b89f7d;
+  color: white;
+ overflow: hidden;
+  text-align: center;
+}
+
+nav {
+  background-color: #000000;
+  color: white;
+  width: 100%;
+}
+
+aside {
+  width: 100%;
+  height: 600px;
+  background-color: #b0a89f;
+  padding: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 10px;
+  flex: 1;
+  width: 100%;
+}
+
+footer {
+  background-color: #9a997c;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/*****FIN DEL FORMATO DE LA PAGINA*******/
+
+.banner-track {
+  display: flex;
+  height: auto;
+  animation: scrollBanner 30s linear infinite;
+}
+
+.banner-track img {
+  width: 1280px;
+  height: 300px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+  border-radius: 0%;
+}
+.banner-track img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+.banner-container:hover .banner-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollBanner {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translateX(calc(-10 * 800px));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-container {
+    height: 150px;
+    width: 95%;
+  }
+
+  .banner-track img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .banner-track {
+    width: calc(9 * 400px);
+  }
+
+  @keyframes scrollBanner {
+    100% {
+      transform: translateX(calc(-10 * 400px));
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    height: 120px;
+  }
+
+  .banner-track img {
+    width: 300px;
+  }
+
+  .banner-track {
+    width: calc(-10 * 300px);
+  }
+
+  @keyframes scrollBanner {
+    100% {
+      transform: translateX(calc(-10 * 300px));
+    }
+  }
+}
+
+/***** barra de navegacion *******/
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  color: white;
+}
+
+nav ul li a:hover {
+  background-color: #ccc;
+  color: #000000;
+  border-radius: 3px;
+}
+
+/***** barra de navegacion *******/
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #9a997c;
+  gap: 50px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+p {
+  text-align: justify;
+}
+
+/***************PARA HACER LO DE LAS IMAGENES QUE MUESTREN UN TEXTITO*****************/
+.elemento-galeria {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.elemento-galeria img {
+  width: 100%;
+  height: 100%;
+  /* Cambiado a 'auto' para mantener la proporción original de la imagen */
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.overlay-cubrir {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.25s ease;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.elemento-galeria:hover .overlay-cubrir {
+  height: 40%;
+}
+
+.texto {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  /* Centra el texto verticalmente */
+  left: 50%;
+  /* Centra el texto horizontalmente */
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+/***************PARA HACER LO DE LAS IMAGENES QUE MUESTREN UN TEXTITO*****************/
+
+/***************CLASES PARA LOS ASIDES****************/
+.aside-izqui-derecho {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 20%;
+  margin-top: 142px;
+}
+
+.div-aside-indi {
+  width: 100%;
+  height: 100%;
+}
+
+/***************CLASES PARA LOS ASIDES****************/
+
+/********ETIQUETAS PARA ARTICLE IMAGEN DERECHA*************/
+
+.contenedor-miembro {
+  flex: 1;
+  height: 100%;
+  gap: 10px;
+  padding: 10px;
+  background-color: antiquewhite;
+  border: 5px solid #000000;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-img {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  width: 100%;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.article-imagen {
+  flex: 1;
+  height: 100%;
+  padding: 0px;
+  border-radius: 5px;
+}
+
+.imagen-galeria {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0px;
+  gap: 10px;
+overflow: hidden;
+  margin: auto;
+  height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  section {
+    width: 80%;
+  }
+
+  .contenedor-img {
+    flex-direction: column;
+  }
+}
+
+
+
+/********ETIQUETAS PARA ARTICLE IMAGEN DERECHA*************/
+
+@media (max-width: 700px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    border-top: 1px solid #333;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .aside-izqui-derecho {
+    display: none;
+  }
+
+  .aside-izqui-derecho {
+    margin-top: 0px;
+  }
+}
+
+/*nos esta diciendo que ciando la pantalla sea menor a 700px, el aside desaparece*/
+
+@media screen and (max-width: 700px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 0px;
+  }
+}
+
+/* nos esta diciendo que cuando la pantalla sea menor a 700px, el main se vuelve una columna y se centra */
+
+/***************PARA HACER LO DE LAS IMAGENES QUE MUESTREN UN TEXTITO*****************/
+.elemento-galeria2 {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.elemento-galeria2 img {
+  width: 100%;
+  height: 100%;
+  /* Cambiado a 'auto' para mantener la proporción original de la imagen */
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.overlay-cubrir2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.25s ease;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.elemento-galeria2:hover .overlay-cubrir2 {
+  height: 60%;
+}
+
+img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.texto2 {
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  text-align: left;
+  padding: 0px 5px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.h1-miem {
+  text-align: center;
+  font-size: 23px;
+}
+
+@media screen and (max-width: 700px) {
+  .texto2 {
+    font-size: 14px;
+  }
+
+  .h1-miem {
+    font-size: 20px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contacto {
+  color: #000000;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.contacto p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.formulario-contacto {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea 
+{
+  padding: 12px;
+  border: 2px solid #000000;
+  border-radius: 0px;
+  font-size: 1rem;
+  width: 500px;
+  background-color: #9a997c;
+
+}
+
+.formulario-contacto button {
+background-color: #9a997c;
+  color: rgb(0, 0, 0);
+  border: 2px solid #000000;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+  background-color: #000000;
+   color: #9a997c;
+}
+
+@media screen and (max-width: 768px) {
+  .contacto {
+    padding: 40px 15px;
+  }
+
+  .formulario-contacto {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    font-size: 1rem;
+    width: 300px;
+  }
+
+  .formulario-contacto button {
+    font-size: 1rem;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contacto h2 {
+    font-size: 2rem;
+  }
+
+  .contacto p {
+    font-size: 1rem;
+  }
+
+  .formulario-contacto {
+    gap: 10px;
+    margin: auto;
+  }
+
+}
+/***************PARA HACER LO DE LAS IMAGENES QUE MUESTREN UN TEXTITO*****************/
