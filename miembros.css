@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Elza";
-  src: url(/Fuentes/fonnts.com-Elza_Bold.otf);
+  src: url(fonnts.com-Elza_Bold.otf);
   font-weight: bold;
   font-style: bold;
 }
@@ -412,3 +412,4 @@ img:hover {
 }
 
 /***************PARA HACER LO DE LAS IMAGENES QUE MUESTREN UN TEXTITO*****************/
+
