@@ -381,7 +381,7 @@ section {
 }
 
 .elemento-galeria2:hover .overlay-cubrir2 {
-  height: 80%;
+  height: 60%;
 }
 
 img:hover {
@@ -412,6 +412,10 @@ img:hover {
   .h1-miem {
     font-size: 20px;
   }
+.elemento-galeria2:hover .overlay-cubrir2
+{
+ height:80%
+}
 }
 
 /***************PARA HACER LO DE LAS IMAGENES QUE MUESTREN UN TEXTITO*****************/
